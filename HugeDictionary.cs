@@ -29,7 +29,7 @@ namespace Rokin
 
             int i = (int)(index / singlearraymaxitems);
             int count = (int)(index % singlearraymaxitems);
-            if (i >= arraysize || i == arraysize-1 && count == singlearraymaxitems - 1) throw new System.IndexOutOfRangeException("exceeded : max items : " + (singlearraymaxitems * arraysize).ToString());
+            if (i >= arraysize ) throw new System.IndexOutOfRangeException("exceeded : max items : " + (singlearraymaxitems * arraysize).ToString());
             return _dictionaries[i].ElementAt((int)count);
         
         }
